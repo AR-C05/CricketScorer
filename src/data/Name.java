@@ -1,7 +1,7 @@
 package data;
 
 public class Name {
-    private String firstName, middleName, lastName;
+    private String firstName = " ", middleName = " ", lastName = " ";
 
     /**
      * Constructor; Full name - first, middle, last
@@ -25,6 +25,6 @@ public class Name {
     }
 
     public String toString() {
-        return firstName + " " + middleName + " " + lastName;
+        return (firstName + " " + middleName + " " + lastName).strip();
     }
 }
