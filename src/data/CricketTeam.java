@@ -4,22 +4,29 @@ import java.util.ArrayList;
 
 public class CricketTeam {
     private String name = "";
-    private ArrayList<Cricketer> squad;
+    private ArrayList<Cricketer> squad = new ArrayList<Cricketer>();
     private Cricketer[] playingXI = new Cricketer[11];
 
     public CricketTeam(String name) {
         this.name = name;
-        squad = new ArrayList<Cricketer>();
+    }
+
+    public boolean isInSquad(Cricketer player) {
+        for (Cricketer cricketer : squad) {
+            if (cricketer.equals(player)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     // add player to squad
     public boolean addToSquad(Cricketer player) {
-        for (Cricketer cricketer : squad) {
-            if (cricketer.equals(player))
-                return false;
+        if (!isInSquad(player)) {
+            squad.add(player);
+            return true;
         }
-        squad.add(player);
-        return true;
+        return false;
     }
 
     // add player to playing xi
