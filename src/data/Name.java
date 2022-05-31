@@ -1,5 +1,14 @@
 package data;
 
+/**
+ * Name class. Holds data for player name.
+ * <p>
+ * Date Created: 2022-05-29
+ * <p>
+ * Date Updated: 2022-05-29
+ * 
+ * @author AR.C
+ */
 public class Name {
     private String firstName = " ", middleName = " ", lastName = " ";
 

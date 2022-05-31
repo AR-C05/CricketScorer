@@ -2,6 +2,15 @@ package scorer;
 
 import data.CricketTeam;
 
+/**
+ * Scorer class. Parent class to score a cricket match.
+ * <p>
+ * Date Created: 2022-05-29
+ * <p>
+ * Date Updated: 2022-05-30
+ * 
+ * @author AR.C
+ */
 public class Scorer {
 
     public static enum TossChoice {BAT, BOWL}

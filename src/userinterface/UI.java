@@ -13,7 +13,6 @@ public class UI {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
         CricketTeam home, away;
         String tempString = "";
-        System.out.print("Enter the name of the home team: ");
         try {
             tempString = input.readLine().strip();
         } catch (IOException e) {
@@ -23,7 +22,16 @@ public class UI {
         home = new CricketTeam(tempString);
     }
 
-    public void getName() {
-        //
+    public static String getTeamName(String homeOrAway, BufferedReader input) {
+        String userInput = "".strip();
+        while (userInput.strip().isBlank() || userInput) {
+            try {
+                System.out.print("Enter the name of the " + homeOrAway + " team: " );
+                userInput = input.readLine().strip();
+            } catch (IOException e) {
+            System.out.println("Please enter a valid team name (letters and/or numbers)");
+            e.printStackTrace();
+        }}
+
     }
 }

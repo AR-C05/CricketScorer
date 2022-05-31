@@ -1,5 +1,14 @@
 package data;
 
+/**
+ * BattingRecord class. Holds data for batting figures of one player for a single match.
+ * <p>
+ * Date Created: 2022-05-29
+ * <p>
+ * Date Updated: 2022-05-30
+ * 
+ * @author AR.C
+ */
 public class BattingRecord {
     private int runs = 0, balls = 0, fours = 0, sixes = 0;
 
