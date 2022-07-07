@@ -46,13 +46,8 @@ public class UI {
         // TODO
         String userInput = "";
         while (userInput.isBlank()) {
-            try {
-                System.out.println("Enter the player's name");
-                userInput = input.readLine().strip();
-            } catch (IOException e) {
-                System.out.println("Please input a valid player name");
-                e.printStackTrace();
-            }
+            System.out.println("Enter the player's name");
+            userInput = IOHandlers.getUserStringInput();
         }
         return Formatters.toTitleCase(userInput);
     }
